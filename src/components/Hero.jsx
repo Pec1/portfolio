@@ -2,14 +2,11 @@
 import { SpacemanCanvas } from '.'
 
 const Hero = ({ scrollContainer }) => {
+    console.log('scrollContainer:', scrollContainer);
     return (
-        <div id="hero" className="parallax">
-            <h1>Hero Section</h1>
+        <section className="parallax">
             <SpacemanCanvas scrollContainer={scrollContainer} />
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde esse repellat necessitatibus error consequuntur, iure minus sapiente delectus in nesciunt tempore, reprehenderit omnis rerum recusandae assumenda optio odio aspernatur dolor?
-            </p>
-        </div>
+        </section>
     )
 }
 
