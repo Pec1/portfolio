@@ -1,4 +1,5 @@
 import { useRef } from 'react';
+import { Header } from './components/Header'
 import { BrowserRouter } from "react-router-dom";
 import { Contact, Experience, Hero, Portfolio } from "./components";
 
@@ -8,8 +9,22 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
-        {/* <Navbar /> */}
+
+
         <div className='wrapper' ref={wrapperRef}>
+          <Header.Root>
+            <a href="">
+              {/* <Image src="/logo.png" alt={'Logo-2'} width={80} height={80}/> */}
+            </a>
+            
+            <Header.List>
+              <Header.Iten text='Teste'/>
+              <Header.Iten text='Teste'/>
+              <Header.Iten text='Teste'/>  
+            </Header.List>
+            
+            <Header.Buttons />
+          </Header.Root>
           <div id="hero" className='z-10'>
             <Hero scrollContainer={wrapperRef} />
           </div>
