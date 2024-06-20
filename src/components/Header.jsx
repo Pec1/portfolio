@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 import { navLinks } from "../data";
 
 const Header = () => {
-    const [active, setActive] = useState("hero");
+    const [active, setActive] = useState("home");
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -40,7 +40,7 @@ const Header = () => {
                     to='/'
                     className='flex items-start'
                     onClick={() => {
-                        setActive("hero");
+                        setActive("home");
                         window.scrollY(0,0)
                     }}      
                 >
