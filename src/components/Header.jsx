@@ -56,44 +56,12 @@ const Header = () => {
                             onClick={() => setActive(nav.id)}
                         >
                         {active === nav.id && (
-                            <div className="fixed right-10 w-2 h-6 lg:h-8 bg-quaternary"></div>
+                            <div className="fixed right-10 w-2 h-6 lg:h-8 bg-[#00c3e7]"></div>
                         )}
-                        <a href={`#${nav.id}`}>{nav.title}</a>
+                            <a href={`#${nav.id}`}>{nav.title}</a>
                         </li>
                     ))}
                 </ul>
-
-                <div className='sm:hidden flex flex-1 justify-end items-center'>
-                    <img
-                        /* src={toggle ? close : menu} */
-                        alt='menu'
-                        className='w-[28px] h-[28px] object-contain pointer-events-auto cursor-pointer'
-                        onClick={() => setToggle(!toggle)}
-                    />
-
-                    <div
-                        className={`${
-                        !toggle ? "hidden" : "flex"
-                        } p-6 absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-30 rounded-xl`}
-                    >
-                        <ul className='list-none flex justify-end items-start flex-1 flex-col gap-4'>
-                            {navLinks.map((nav) => (
-                                <li
-                                    key={nav.id}
-                                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                                    active === nav.id ? "text-quaternary" : "text-secondary"
-                                }`}
-                                onClick={() => {
-                                setToggle(!toggle);
-                                setActive(nav.id);
-                            }}
-                            >
-                                <a href={`#${nav.id}`}>{nav.title}</a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
             </div>
         </nav>
     );

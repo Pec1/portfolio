@@ -3,7 +3,7 @@ import { SpacemanCanvas } from '.'
 
 const Hero = ({ scrollContainer }) => {
     return (
-        <section className="relative min-h-screen flex justify-center items-center p-8">
+        <section className="parallax-stars relative min-h-screen flex justify-center items-center p-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="flex flex-col justify-center items-end">
                     <div className='text-left w-1/2'>
@@ -19,7 +19,6 @@ const Hero = ({ scrollContainer }) => {
                 </div>
             </div>
         </section>
-
     )
 }
 

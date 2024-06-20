@@ -38,13 +38,12 @@
 }
 
 .parallax {
-  min-height: 75vh;
+  min-height: 100vh;
   min-width: 2000px;
   width: 100%;
-
-
-  display: grid;
-
+}
+.parallax-stars {
+  background-image: url('./1Stars.svg');
 }
 
 .teste {
