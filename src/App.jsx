@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { BrowserRouter } from "react-router-dom";
-import { Contact, Experience, Hero, Portfolio, Header } from "./components";
+import { Contact, Experience, Hero, Portfolio, Header, About } from "./components";
 
 const App = () => {
   const wrapperRef = useRef(null);
@@ -12,6 +12,9 @@ const App = () => {
         <div className='wrapper' ref={wrapperRef}>
           <div id="home" className='z-10'>
             <Hero scrollContainer={wrapperRef} />
+          </div>
+          <div id="about" className='z-10'>
+            <About />
           </div>
           <div id="portfolio" className='relative z-30 bg-primary mt-[-2px]'>
             <Portfolio />

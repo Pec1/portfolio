@@ -11,9 +11,7 @@ const Projects = () => {
                         </p>
                     </div>
                 </div>
-                <div className="parallax">
-
-                </div>
+                <div className="parallax"></div>
             </div>
         </section>
     )
