@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
-import { useAnimations, useGLTF } from "@react-three/drei";
+import { useAnimations, useGLTF, OrthographicCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 import spacemanScene from "../assets/3d/spaceman.glb";
@@ -69,6 +69,7 @@ const SpacemanCanvas = ({ scrollContainer }) => {
 
   return (
     <Canvas className={`w-full h-screen max-w-[35rem] bg-transparent z-10`} camera={{ near: 0.1, far: 1000 }}>
+      <OrthographicCamera near={-10} far={10} />
       <Suspense fallback={<CanvasLoader />}>
         <directionalLight position={[1, 1, 1]} intensity={2} />
         <ambientLight intensity={0.5} />
